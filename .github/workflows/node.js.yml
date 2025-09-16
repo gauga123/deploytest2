@@ -12,7 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write # 👈 phải có để push vào repo
+      packages: write
     strategy:
       matrix:
         node-version: [20.x, 22.x]
